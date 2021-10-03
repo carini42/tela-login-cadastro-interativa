@@ -91,24 +91,24 @@ body {
     margin-top: 1rem;
 }
 
-.btn-sign-in {
+.btn-primary {
     background-color: transparent;
     border: 1px solid white;
     transition: background-color .5s;
 }
 
-.btn-sign-in:hover {
+.btn-primary:hover {
     background-color: white;
     color: #58af9b;
 }
 
-.btn-sign-up {
+.btn-second {
     background-color: #58af9b;
     border: 1px solid #58af9b;
     transition: background-color .5s;
 }
 
-.btn-sign-up:hover {
+.btn-second:hover {
     background-color: #fff;
     border: 1px solid #58af9b;
     color: #58af9b;
@@ -143,6 +143,7 @@ body {
     border-color: #58af9b;
     color: #fff;
 }
+
 .list-social-media {
     display: flex;
     list-style-type: none;
@@ -164,16 +165,16 @@ body {
     width: 55%;
 }
 
-iput:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
-    -webkit-text-fill-color: #000 !important;
-}
-
 .form input {
     height: 45px;
     border: none;
     background-color: #ecf0f1;
     width: 100%;
+}
+
+iput:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 .label-input {
@@ -187,8 +188,10 @@ iput:-webkit-autofill {
     color: #7f8c8d;
     padding: 0 5px;
 }
+
 .second-content {
     position: absolute;
+    display: flex;
 }
 
 .second-content .first-column {
@@ -212,14 +215,16 @@ iput:-webkit-autofill {
     text-transform: capitalize;
 }
 
- .sign-in-js .first-content .first-column,
- .sign-in-js .first-content .second-column {
+ .sign-in-js .first-content .first-column {
      z-index: -1;
  } 
 
- .sign-in-js .second-content .first-column,
  .sign-in-js .second-content .second-column {
-     z-index: 12;
+     z-index: 11;
+ }
+
+ .sign-in-js .second-content .first-column {
+    z-index: 13;
  }
 
  .sign-in-js .content::before {
@@ -228,14 +233,36 @@ iput:-webkit-autofill {
     border-bottom-left-radius: 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    animation: slidein 1.3s;
+    z-index: 12;
  }
 
- .sign-up-js .second-content .first-column,
- .sign-up-js .second-content .second-column {
-     z-index: -1;
- }
+ .sign-up-js .content::before {
+    animation: slideout 1.3s;
+    z-index: 12;
+}
 
- .sign-up-js .second-content .first-column,
- .sign-up-js .second-content .second-column {
-     z-index: 12;
- }
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .first-content .second-column {
+    z-index: 11;
+}
+
+.sign-up-js .first-content .first-column {
+    z-index: 13;    
+}
+
+.sign-in-js .first-content .second-column {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.3s; 
+}
+
+.sign-up-js .second-content .second-column {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 1.3s; 
+}
