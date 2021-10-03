@@ -13,57 +13,109 @@
     <div class="container">
         <div class="content first-content">
             <div class="first-column">
-                <h2 class="title title-welcome">Welcome Back!</h2>
+                <h2 class="title title-primary">Welcome Back!</h2>
                 <p class="description description-primary">To keep connected with us</p>
                 <p class="description description-primary">please login with your personal info</p>
-                <button class="btn btn-sign-in">Sign In</button>
+                <button id="signin" class="btn btn-sign-in">Sign In</button>
             </div>
 
             <div class="second-column">
-                <h2 class="title title-create">Create Account</h2>
+                <h2 class="title title-second">Create Account</h2>
                 <div class="social-media">
                    <ul class="list-social-media">
-                       <li class="item-sm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                       <li class="item-sm"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                       <li class="item-sm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                       <a class="link-sm" href="#">
+                           <li class="item-sm">
+                               <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+
+                       <a class="link-sm" href="#">
+                           <li class="item-sm">
+                               <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+
+                       <a class="link-sm" href="#">
+                           <li class="item-sm">
+                               <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
                    </ul>
+
                 </div>
                 <p class="description description-second">or use your email for registration:</p>
                 <form class="form">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <button class="btn">Sign Up</button>
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Name">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Password">
+                    </label>
+
+                    <button id="signup" class="btn btn-sign-up">Sign Up</button>
                 </form>
            </div>
         </div>
 
         <div class="content second-content">
             <div class="first-column">
-                <h2 class="title">Hello, Friend!</h2>
-                <p class="description">Enter yout personal details</p>
-                <p class="description">and start journey with us</p>
-                <button class="btn">Sign Up</button>
+                <h2 class="title title-primary">Hello, Friend!</h2>
+                <p class="description description-primary">Enter yout personal details</p>
+                <p class="description description-primary">and start journey with us</p>
+                <button class="btn btn-sign-in">Sign Up</button>
             </div>
 
             <div class="second-column">
-                <h2 class="title">Sign In to developer</h2>
+                <h2 class="title title-second">Sign In to developer</h2>
                 <div class="social-media">
-                <ul>
-                    <li><a href="#">facebook</a></li>
-                    <li><a href="#">google plus</a></li>
-                    <li><a href="#">linkedin</a></li>
-                </ul>
-                </div>
-                <p class="description">Or use your email account:</p>
+                    <ul class="list-social-media">
+                        <a class="link-sm" href="#">
+                            <li class="item-sm">
+                                <i class="fab fa-facebook-f"></i>
+                             </li>
+                         </a>
+ 
+                        <a class="link-sm" href="#">
+                            <li class="item-sm">
+                                <i class="fab fa-google-plus-g"></i>
+                             </li>
+                         </a>
+ 
+                        <a class="link-sm" href="#">
+                            <li class="item-sm">
+                                <i class="fab fa-linkedin-in"></i>
+                             </li>
+                         </a>
+                    </ul>
+ 
+                 </div>
+                <p class="description description-second">or use your email account:</p>
                 <form class="form">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <a href="#">Forgot your password?</a>
-                    <button class="btn">Sign In</button>
+                    
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Password">
+                    </label>
+                    
+                    <a class="password" href="#">Forgot your password?</a>
+                    <button class="btn btn-sign-up">Sign In</button>
                 </form>
             </div>
        </div>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>
